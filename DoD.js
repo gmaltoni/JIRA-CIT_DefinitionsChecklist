@@ -1,5 +1,9 @@
 confirmDod = function(dod) {
-  return confirm("Did you fulfill the DoD?\n"+dod);
+  return confirm("Did you fulfill the DoD?\n" + dod);
+};
+
+reload = function(time) {
+  window.setTimeout(function(){window.location.reload() ;}, time);
 };
 
 dodBacklog = "Backlog:\n\
