@@ -52,7 +52,7 @@ dodCodeReview = "Code Review:\n\
 2. Hours logged in Code review Sub-imp.\n\
 3. Bugs tickets were closed (if applicable).\n\
 4. Check if the Estimate Hours is equal to zero in the Story.\n\
-5. Story status was updated.\n\
+5. Story status was updated.";
 
 dodQA = "QA:\n\
 1. Test cases were closed on Jira.\n\
@@ -65,7 +65,7 @@ dodBugFixing = "Bug Fixing:\n\
 1. Bug’s Root Cause was filled.\n\
 2. Bug’s Root Cause notes was filled.\n\
 3. Resolution field of bug was filled.\n\
-4. Logged hours on task.\n\";
+4. Logged hours on task.";
 
 dodInMTS = "In MTS:\n\
 1. All requirements were executed and delivered to customer.\n\
