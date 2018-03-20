@@ -2,10 +2,6 @@ confirmDod = function(dod) {
   return confirm("Did you fulfill the DoD?\n" + dod);
 };
 
-reloadWindow = function(time) {
-  window.setTimeout(function(){window.location.reload() ;}, time);
-};
-
 dodBacklog = "Backlog:\n\
 1. Prioritization has been completed.";
 
