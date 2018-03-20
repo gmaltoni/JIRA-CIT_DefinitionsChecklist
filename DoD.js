@@ -2,7 +2,7 @@ confirmDod = function(dod) {
   return confirm("Did you fulfill the DoD?\n" + dod);
 };
 
-reload = function(time) {
+reloadWindow = function(time) {
   window.setTimeout(function(){window.location.reload() ;}, time);
 };
 
