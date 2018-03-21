@@ -1,3 +1,7 @@
+confirmDod = function(dod) {
+  return confirm("Did you fulfill the DoD?");
+};
+
 dodBacklog = [
   "Prioritization has been completed."
 ];
