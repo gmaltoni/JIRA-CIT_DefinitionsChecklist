@@ -1,4 +1,4 @@
-confirmDod = function(dod) {
+confirmDod = function() {
   return confirm("Did you fulfill the DoD?");
 };
 
