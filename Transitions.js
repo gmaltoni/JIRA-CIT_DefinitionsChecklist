@@ -36,7 +36,10 @@
                 }
 
                 if (checkedItems) {
+                    // Set focus on comment functionality
                     $("#comment-issue").click();
+
+                    // Create comment
                     $("#comment").text(createJiraComment(issueStatus, definitions, checkedItems));
                     $("#issue-comment-add-submit").click();
                 }
@@ -46,11 +49,15 @@
 })();
 
 $(document).ajaxComplete(function(event, request, settings) {
-  if (settings.url == '/secure/AjaxIssueAction!default.jspa') {
-    window.location.reload();
-  }
+    // Refresh page (to reload script) only when the user updates issue status
+    if (settings.url.indexOf('/secure/CommentAssignIssue.jspa?') > -1) {
+        window.location.reload();
+    }
 });
 
+/**
+ * Given an issue status, returns all configured definitions
+ */
 function getDefinitions(issueStatus) {
     var definitions;
     var consideredIssuesStatus = Object.keys(definitionsByIssuesStatus);
@@ -64,6 +71,9 @@ function getDefinitions(issueStatus) {
     return definitions;
 }
 
+/**
+ * Create form layout
+ */
 function createForm(definitions) {
     // Create main div
     if ($("#definitions-content").length === 0) {
@@ -119,22 +129,25 @@ function createForm(definitions) {
         var button = document.createElement("input");
         button.id = "definitions-submit";
         button.type = "submit";
-        button.value = "Generate Comment";
+        button.value = "Add Comment";
         button.className = "aui-button";
         $("#definitions-content").append(button);
     }
 }
 
+/**
+ * Create JIRA comment that will be pusblished
+ */
 function createJiraComment(issueStatus, definitions, checkedItems) {
     var comment = "";
 
     for (var definitionType in definitions) {
         comment += '\n{panel:title=' + definitionType.toUpperCase() + ' - ' + issueStatus + '}';
 
-        for (index = 0; index < definitions[definitionType].length; ++index) {
+        for (index = 0; index < definitions[definitionType].length; index++) {
             var jiraIcon = '(i)';
-
-            if (checkedItems.indexOf(definitions[definitionType][index].toString()) > -1) {
+            var itemWasChecked = (checkedItems[definitionType].indexOf(index.toString()) > -1);
+            if (itemWasChecked) {
                 jiraIcon = '(/)';
             }
 
