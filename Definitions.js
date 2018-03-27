@@ -1,21 +1,13 @@
 /**
  * Set all configurations - REQUIRED
- *   consideredIssueTypes: script will only work for the configured issues types
- *     Example:
- *       consideredIssueTypes = [
- *         "1º Issue Type"
- *       ];
- *
- *   definitionsByIssuesStatus: script will only work for the configured relations
- *     Example:
- *       definitionsByIssuesStatus = {
- *         issueStatus: {
- *           dor: dorIssueStatus,
- *           dod: dodIssueStatus,
- *           ...
- *         },
- *         ...
- *       };
+ */
+
+/**
+ * consideredIssueTypes: script will only work for the configured issues types
+ *   Example:
+ *     consideredIssueTypes = [
+ *       "1º Issue Type"
+ *     ];
  */
 consideredIssueTypes = [
   "Content Change",
@@ -28,6 +20,22 @@ consideredIssueTypes = [
   "Non Functional Task"
 ];
 
+/**
+ * definitionsByIssuesStatus: script will only work for the configured relations
+ *   Example:
+ *     definitionsByIssuesStatus = {
+ *       issueStatus: {
+ *         dor: [
+ *           "1º Item"
+ *         ],
+ *         dod: [
+ *           "1º Item"
+ *         ],
+ *         ...
+ *       },
+ *       ...
+ *     };
+ */
 definitionsByIssuesStatus = {
   backlog: {
     dod: [
