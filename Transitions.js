@@ -16,7 +16,7 @@
 
     // Check if current issue type is configured to be considered
     if ($.inArray(issueType, consideredIssueTypes) != -1) {
-        var definitions = getDefinitions(issueStatus);
+        var definitions = getDefinitionsByIssueStatus(issueStatus);
 
         if (definitions) {
             createForm(definitions);
@@ -58,13 +58,29 @@ $(document).ajaxComplete(function(event, request, settings) {
 /**
  * Given an issue status, returns all configured definitions
  */
-function getDefinitions(issueStatus) {
+function getDefinitionsByIssueStatus(issueStatus) {
     var definitions;
-    var consideredIssuesStatus = Object.keys(definitionsByIssuesStatus);
+    var consideredIssueStatus = Object.keys(definitionsByIssueStatus);
 
-    for (var index = 0; index < consideredIssuesStatus.length; index++) {
-        if (consideredIssuesStatus[index].toUpperCase() === issueStatus.replace(/\s/g,'').toUpperCase()) {
-            definitions = definitionsByIssuesStatus[consideredIssuesStatus[index]];
+    for (var index = 0; index < consideredIssueStatus.length; index++) {
+        if (consideredIssueStatus[index].toUpperCase() === issueStatus.replace(/\s/g,'').toUpperCase()) {
+            definitions = definitionsByIssueStatus[consideredIssueStatus[index]];
+        }
+    }
+
+    return definitions;
+}
+
+/**
+ * Given an issue type, returns all configured definitions
+ */
+function getDefinitionsByIssueType(issueType) {
+    var definitions;
+    var consideredIssueTypes = Object.keys(definitionsByIssueType);
+
+    for (var index = 0; index < consideredIssueTypes.length; index++) {
+        if (consideredIssueTypes[index].toUpperCase() === issueType.replace(/\s/g,'').toUpperCase()) {
+            definitions = definitionsByIssueType[consideredIssueTypes[index]];
         }
     }
 

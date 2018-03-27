@@ -21,9 +21,9 @@ consideredIssueTypes = [
 ];
 
 /**
- * definitionsByIssuesStatus: script will only work for the configured relations
+ * definitionsByIssueStatus: script will only work for the configured relations
  *   Example:
- *     definitionsByIssuesStatus = {
+ *     definitionsByIssueStatus = {
  *       issueStatus: {
  *         dor: [
  *           "1º Item"
@@ -36,7 +36,7 @@ consideredIssueTypes = [
  *       ...
  *     };
  */
-definitionsByIssuesStatus = {
+definitionsByIssueStatus = {
   backlog: {
     dod: [
       "Prioritization has been completed."
@@ -223,8 +223,27 @@ definitionsByIssuesStatus = {
       "All code were committed to PROD environment.",
       "Were realized a SMOKE or REGRESSION Test."
     ]
-  },
-  bugFixing: {
+  }
+};
+
+/**
+ * definitionsByIssueType: script will only work for the configured relations
+ *   Example:
+ *     definitionsByIssueType = {
+ *       issueType: {
+ *         dor: [
+ *           "1º Item"
+ *         ],
+ *         dod: [
+ *           "1º Item"
+ *         ],
+ *         ...
+ *       },
+ *       ...
+ *     };
+ */
+definitionsByIssueType = {
+  legacyBug: {
     dod: [
       "Bug’s Root Cause was filled.",
       "Bug’s Root Cause notes was filled.",
@@ -232,4 +251,4 @@ definitionsByIssuesStatus = {
       "Logged hours on task."
     ]
   }
-};
+}
