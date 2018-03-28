@@ -43,10 +43,6 @@ definitionsByIssueStatus = {
     ]
   },
   doingBusinessGrooming: {
-    dor: [
-      "Item 1",
-      "Item 2"
-    ],
     dod: [
       "Story slicing.",
       "CPs calculated.",
