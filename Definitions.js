@@ -21,9 +21,9 @@ consideredIssueTypes = [
 ];
 
 /**
- * definitionsByIssuesStatus: script will only work for the configured relations
+ * definitionsByIssueStatus: script will only work for the configured relations
  *   Example:
- *     definitionsByIssuesStatus = {
+ *     definitionsByIssueStatus = {
  *       issueStatus: {
  *         dor: [
  *           "1º Item"
@@ -36,13 +36,17 @@ consideredIssueTypes = [
  *       ...
  *     };
  */
-definitionsByIssuesStatus = {
+definitionsByIssueStatus = {
   backlog: {
     dod: [
       "Prioritization has been completed."
     ]
   },
   doingBusinessGrooming: {
+    dor: [
+      "Item 1",
+      "Item 2"
+    ]
     dod: [
       "Story slicing.",
       "CPs calculated.",
