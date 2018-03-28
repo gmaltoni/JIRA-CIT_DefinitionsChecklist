@@ -60,11 +60,11 @@ $(document).ajaxComplete(function(event, request, settings) {
  */
 function getDefinitions(issueStatus) {
     var definitions;
-    var consideredIssuesStatus = Object.keys(definitionsByIssuesStatus);
+    var consideredIssuesStatus = Object.keys(definitionsByIssueStatus);
 
     for (var index = 0; index < consideredIssuesStatus.length; index++) {
         if (consideredIssuesStatus[index].toUpperCase() === issueStatus.replace(/\s/g,'').toUpperCase()) {
-            definitions = definitionsByIssuesStatus[consideredIssuesStatus[index]];
+            definitions = definitionsByIssueStatus[consideredIssuesStatus[index]];
         }
     }
 
