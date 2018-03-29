@@ -216,21 +216,5 @@ definitionsByIssueStatus = {
             "All code were committed to PROD environment.",
             "Were realized a SMOKE or REGRESSION Test."
         ]
-    },
-    doneMtp: {
-        dor: [
-            "All requirements were executed and delivered to customer.",
-            "All changes in db were made.",
-            "All code were committed to PROD environment.",
-            "Were realized a SMOKE or REGRESSION Test."
-        ]
-    },
-    bugFixing: {
-        dod: [
-            "Bug’s Root Cause was filled.",
-            "Bug’s Root Cause notes was filled.",
-            "Resolution field of bug was filled.",
-            "Logged hours on task."
-        ]
     }
 };

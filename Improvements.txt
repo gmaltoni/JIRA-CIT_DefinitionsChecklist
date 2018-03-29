@@ -1,7 +1,0 @@
-- Implement definitions for Issue Types by Issue Status. Ex: specific definitions for Legacy Bugs when Done Development.
-- Check if current Issue Status already contains a Definition comment:
-	- Yes: check if all items were filled in.
-		- Yes: not show the form.
-		- No: show the form only with the available options to be checked.
-	- No: show the form.
-- When creating a comment, check if user can edit an existing Definition comment before creating a new one.
