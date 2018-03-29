@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         JIRA - Defining Issues Status
+// @name         JIRA CI&T - Definitions Checklist
 // @namespace    https://jiracloud.cit.com.br
 // @version      1.0
-// @description  Setting definitions in status transitions
+// @description  Creates a definitions checklist for each issue
 // @author       gmaltoni
-// @require      https://raw.githubusercontent.com/gmaltoni/jnj-vpro/master/Definitions.js
+// @require      https://raw.githubusercontent.com/gmaltoni/JIRA-CIT_DefinitionsChecklist/master/DefinitionsExample.js
 // @match        https://jiracloud.cit.com.br/browse*
 // @grant        none
 // ==/UserScript==
