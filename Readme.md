@@ -25,7 +25,6 @@ Before updating:
 
 After updating:
 ```javascript
-// Before configuration
 // @require https://[YOUR_CONFIGURATION_FILE_LINK]
 ```
 
