@@ -104,7 +104,7 @@ function createForm(definitions) {
             orderedList.id = definitionType + "-ordered-list";
             form.appendChild(orderedList);
 
-            for (index = 0; index < definitions[definitionType].length; ++index) {
+            for (var index = 0; index < definitions[definitionType].length; ++index) {
                 var item = document.createElement("li");
                 orderedList.appendChild(item);
 
@@ -144,7 +144,7 @@ function createJiraComment(issueStatus, definitions, checkedItems) {
     for (var definitionType in definitions) {
         comment += '\n{panel:title=' + definitionType.toUpperCase() + ' - ' + issueStatus + '}';
 
-        for (index = 0; index < definitions[definitionType].length; index++) {
+        for (var index = 0; index < definitions[definitionType].length; index++) {
             var jiraIcon = '(i)';
             var itemWasChecked = (checkedItems[definitionType].indexOf(index.toString()) > -1);
             if (itemWasChecked) {
