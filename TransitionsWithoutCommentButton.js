@@ -39,7 +39,10 @@ function getDefinitions(issueStatus) {
     var consideredIssuesStatus = Object.keys(definitionsByIssueStatus);
 
     for (var index = 0; index < consideredIssuesStatus.length; index++) {
-        if (consideredIssuesStatus[index].toUpperCase() === issueStatus.replace(/\s/g,'').toUpperCase()) {
+        var issueStatusWithoutSpaces = issueStatus.replace(/\s/g,'').toUpperCase();
+
+        if (consideredIssuesStatus[index].toUpperCase() === issueStatusWithoutSpaces ||
+            consideredIssuesStatus[index].toUpperCase() === issueStatusWithoutSpaces.replace('&', 'And').toUpperCase()) {
             definitions = definitionsByIssueStatus[consideredIssuesStatus[index]];
         }
     }
