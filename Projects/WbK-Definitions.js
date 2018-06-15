@@ -79,18 +79,18 @@ definitionsByIssueStatus = {
             "Insert work hours in Jira."
     	]
     },
-    /*doingA&D: {
+    doingAAndD: {
         dod: [
             "Story Opening.",
             "Blocks registered on Jira."
         ]
     },
-    doneA&D: {
+    doneAAndD: {
         dor: [
             "Story Opening.",
             "Blocks registered on Jira."
         ]
-    },*/
+    },
     doingDev: {
     	dor: [
     	    "Feature branch created.",
